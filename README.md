@@ -2,7 +2,8 @@
 
 ## Description
 
-This is a simple client that consumes configs from config-server:
+This is a simple client that consumes configs from config-server and is notified when a config is changed.
+The configs are read:
 
 - using @Value and @RefreshScope
 - using @ConfigurationProperties (with value and variable)
@@ -25,18 +26,11 @@ brew install --ignore-dependencies maven
 ## Usage
 
 First you need to start [config-server](https://github.com/octavian-h/config-server)
-After that run the following commands:
+After that, run the following commands:
 
 ```bash
 mvn clean package
-cd target/
-java -jar client.jar
+java -jar ./target/client.jar
 ```
 
 The available endpoints can be seen on [Swagger UI](http://127.0.0.1:8080/di-terms-of-use-management/api/swagger-ui/index.html).
-
-To update the config to the latest values you need to call:
-
-```http request
-POST http://127.0.0.1:8080/actuator/refresh
-```
