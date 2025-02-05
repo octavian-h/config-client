@@ -33,4 +33,4 @@ mvn clean package
 java -jar ./target/client.jar
 ```
 
-The available endpoints can be seen on [Swagger UI](http://127.0.0.1:8080/di-terms-of-use-management/api/swagger-ui/index.html).
+The available endpoints can be seen on [Swagger UI](http://127.0.0.1:8080/swagger-ui.html).
